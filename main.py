@@ -1,4 +1,5 @@
 from stats import nums_of_word
+from stats import count_char
 
 def main():
     def get_book_text():
@@ -9,9 +10,11 @@ def main():
     return book_text   
 
 book_text = main()  
-word_count = nums_of_word(book_text)                   
+word_count = nums_of_word(book_text) 
+char_text = count_char(book_text)         
 
 print(f"{word_count} words found in the document")
+print(char_text)
 
 main()
 
