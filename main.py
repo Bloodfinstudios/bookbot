@@ -13,6 +13,7 @@ def main():
         sys.exit(1)
     book_path = sys.argv[1]
     text = get_book_text(book_path)
+    print(f"DEBUG: Length of text: {len(text)}")
 
     word_count = nums_of_word(text)
     char_text = count_char(text)
@@ -29,4 +30,4 @@ def main():
         print(f"{item['char']}: {item['num']}")
     print("============= END ===============")
 
-
+main()
