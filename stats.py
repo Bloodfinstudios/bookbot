@@ -12,3 +12,10 @@ def count_char(text):
             counts[lower_case] = 1
     return counts
 
+def sort_list(char_count_dict):
+    sort = []
+    for char, num in char_count_dict.items():
+        if char.isalpha():
+            sort.append({"char": char, "num": num})
+    sort.sort(reverse=True, key=lambda item: item["num"])
+    return sort
