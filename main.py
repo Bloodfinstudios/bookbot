@@ -1,3 +1,4 @@
+from stats import get_num_words
 
 # main body of the program 
 def main():
@@ -10,11 +11,6 @@ def main():
 def get_book_text(path):
     with open(path) as f:
         return f.read()
-
-# finds the number of words
-def get_num_words(text):
-    words = text.split()
-    return len(words)
 
 
 main()
