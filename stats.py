@@ -14,4 +14,15 @@ def count_char(text):
             alp_char[i] = 1
     return alp_char
 
-    
+def sort_on(item):
+    return item["num"]
+
+def sorted_dictionary(char_dict):
+ char_list = []
+ for ch in char_dict:
+        count = char_dict[ch]
+        char_list.append({"char": ch, "num": count})
+        char_list.sort(reverse=True, key=sort_on)
+ return char_list  
+
+
