@@ -1,4 +1,5 @@
 from stats import get_num_words, count_char, sorted_dictionary
+import sys
 
 # main body of the program 
 def main():
@@ -22,6 +23,11 @@ def main():
 
     print("============= END ===============")
 
+    print(sys.argv)
+    print(len(sys.argv))
+    if len(sys.argv) < 2:
+        print("Usage: python3 main.py <path_to_book>")
+    sys.exit(1)
 
 
 # gets book from directory
