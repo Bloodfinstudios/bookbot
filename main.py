@@ -3,7 +3,11 @@ import sys
 
 # main body of the program 
 def main():
-    book_path = "books/frankenstein.txt"
+    if len(sys.argv) < 2:
+        print("Usage: python3 main.py <path_to_book>")
+        sys.exit(1)
+
+    book_path = sys.argv[1]
     text = get_book_text(book_path)
     num_words = get_num_words(text)
     out_char = count_char(text)
@@ -22,12 +26,6 @@ def main():
             print(f"{ch}: {num}")
 
     print("============= END ===============")
-
-    print(sys.argv)
-    print(len(sys.argv))
-    if len(sys.argv) < 2:
-        print("Usage: python3 main.py <path_to_book>")
-    sys.exit(1)
 
 
 # gets book from directory
